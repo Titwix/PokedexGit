@@ -1,0 +1,11 @@
+<mat-toolbar>
+ <span class="title-list-pokemons">Mon Pokédex</span>
+</mat-toolbar>
+<mat-nav-list class="nav-pokemons" infiniteScroll (scrolled)="onScroll()">
+  <mat-list-item class="list-pokemons" *ngFor="let pokemon of pokemons?.data">
+    <a class="element-list-pokemons" routerLink="/detail/{{pokemon.id}}">
+      <img matListAvatar src="../../../assets/img/sprites/{{pokemon.id}}.png" alt="Image_Pokemon{{pokemon.id}}">
+      <h3 matLine> {{pokemon.id}}. {{pokemon.name}} </h3>
+    </a>
+  </mat-list-item>
+</mat-nav-list>

@@ -1,0 +1,40 @@
+<button class="button-back" mat-fab (click)="goBack()">
+    <mat-icon>keyboard_return</mat-icon>
+  </button>
+
+<ng-container *ngIf="pokemon">
+  <mat-card class="card-pokemon">
+    <mat-grid-list cols="2" rowHeight="1:1">
+      <mat-grid-tile class="card-block1">
+        <mat-list>
+          <img class="img-pokemon" matListAvatar src="../../../assets/img/official-artwork/{{pokemon.id}}.png"
+            alt="Image_Pokemon{{pokemon.id}}">
+          <mat-list-item class="id-pokemon">No. {{pokemon.id}}</mat-list-item>
+        </mat-list>
+      </mat-grid-tile>
+      <mat-grid-tile class="card-block2">
+          <mat-list>
+        <mat-list-item class="name-pokemon">
+          <mat-card-title>{{pokemon.name}}</mat-card-title><mat-icon class="icon-pokemon" (click)="playCriPokemon()">play_circle_outline</mat-icon>
+        </mat-list-item>
+        <mat-chip-list>
+            <mat-chip *ngFor="let type of pokemon['types']">{{type}}</mat-chip>
+          </mat-chip-list>
+        
+        <mat-list-item class="height-pokemon">
+          <label>Taille : {{pokemon.height}} m</label>
+        </mat-list-item>
+        <mat-list-item class="weight-pokemon">
+          <label>Poids : {{pokemon.weight}} kg</label>
+        </mat-list-item>
+      </mat-list>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="1" rowHeight="2:1">
+      <mat-grid-tile class=".card-block3">
+        <mat-card-subtitle>{{pokemon.description}}</mat-card-subtitle>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card>
+  </ng-container>

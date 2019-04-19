@@ -1,0 +1,47 @@
+
+// :host ::ng-deep {
+//         .mat-figure .card-block1 {
+//             display: block;
+//             max-width: 4000%;
+        
+//     }
+// }
+
+.card-pokemon {
+    max-width: 400px;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-pokemon {
+    max-width: 85%;
+	height: auto;
+}
+
+.id-pokemon {
+    // text-align: center;
+}
+
+.icon-pokemon {
+    cursor: pointer;
+    margin:6%;
+    padding-bottom: 8px;
+}
+
+.button-back{
+    margin:3%;
+}
+
+// .card-block1 {
+//     display: block;
+//     text-align: center;
+// }
+
+// .card-block2 {
+
+// }
+
+// .card-block3 {
+
+// }
